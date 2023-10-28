@@ -33,3 +33,31 @@ integer_list = [int(x) for x in user_input.split()]
 
 max_value = findMax(integer_list)
 print(f"The maximum value in the list is {max_value}.")
+
+
+def displayMenu():
+  print(" 1. Count Digits\n 2. Find Max\n 3. Count Tags\n 4. Exit\n")
+
+displayMenu()
+    
+def main2():
+  displayMenu()
+
+  choice = int(input("Please enter your choice here:"))
+
+
+  while (choice != 4):
+    if choice == 1:
+      digitsCount()
+    elif choice == 2:
+      findMax([45, 50 ,51 ,68])
+    elif choice == 3:
+      countTags()
+    else:
+      print("Invalid choice")
+
+    displayMenu()
+    choice = int(input("Please enter your choice here:"))
+
+    exit()
+main2()
