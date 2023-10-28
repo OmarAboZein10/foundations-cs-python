@@ -14,3 +14,22 @@ try:
     print(f"The number of digits in {user_input} is {Count}.")
 except ValueError:
     print("Invalid input. Please enter a valid integer.")
+
+
+
+def findMax(list1):
+    if len(list1) == 1:
+        return list1[0]
+
+    rest_max = findMax(list1[1:])
+    if list1[0] > rest_max:
+        return list1[0]
+    else:
+        return rest_max
+
+
+user_input = input("Enter a list of integers separated by spaces: ")
+integer_list = [int(x) for x in user_input.split()]
+
+max_value = findMax(integer_list)
+print(f"The maximum value in the list is {max_value}.")
